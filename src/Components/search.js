@@ -54,17 +54,17 @@ export default function Search() {
             {visibleDiv === 'div1' &&
               <div id="div1">
                 <h4><i>Standard Definition</i></h4>
-                <p>{item.links['1']?.attributes?.quality }</p>
-                <a href={item.links['1']?.link} target="_blank" rel="noopener noreferrer">
-                  {item.links['1']?.quality } Download Link
+                <p>{item.links['2']?.attributes?.quality }</p>
+                <a href={item.links['2']?.link} target="_blank" rel="noopener noreferrer">
+                  {item.links['2']?.quality } Download Link
                 </a>
               </div>}
             {visibleDiv === 'div2' && 
               <div id="div2">
                 <h4><i>High Definition</i></h4>
-                <p>{item.links['2']?.attributes?.quality }</p>
-                <a href={item.links['2']?.link} target="_blank" rel="noopener noreferrer">
-                  {item.links['2']?.quality } Download Link
+                <p>{item.links['3']?.attributes?.quality }</p>
+                <a href={item.links['3']?.link} target="_blank" rel="noopener noreferrer">
+                  {item.links['3']?.quality } Download Link
                 </a>
               </div>}
             <br />

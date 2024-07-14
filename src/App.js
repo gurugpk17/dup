@@ -1,17 +1,17 @@
+// App.js
 import React from 'react';
-import Nav from './Components/nav'
-import Youtube from './Components/youtube_down'
-import Search from './Components/search'
-import Footer from './Components/footer'
+import { BrowserRouter as Router } from 'react-router-dom';
+import Nav from './Components/nav';
+import AppRoutes from './Components/AppRoutes';
 import './App.css';
 
-export default function App() {
-  return (
-    <div classname="Container">
-      <Nav />
-      <Youtube />
-      <Search />
-      <Footer />
-    </div>
-  )
+function App() {
+    return (
+        <Router>
+            <Nav />
+            <AppRoutes />
+        </Router>
+    );
 }
+
+export default App;

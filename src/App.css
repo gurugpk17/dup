@@ -25,12 +25,25 @@ html{
   gap: 70px;
 }
 .link1,.link2,.link3{
+  text-decoration: none;
+  font-family: cursive;
+  color: black;
   font-size: x-large;
 }
 .link1:hover,.link2:hover,.link3:hover{
   border-bottom:solid #0074FF 3px;
   /* border-radius: 50px; */ 
 }
+/* nav ends */
+
+/* home */
+.home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* home ends */
+
 .img_r1{
   display: flex;
   gap:50%;
