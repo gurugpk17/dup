@@ -33,8 +33,8 @@ export default function Search() {
             MP4 <i className="fa fa-caret-down"></i>
           </button>
           <div className="subnav-content">
-            <button onClick={() => setVisibleDiv('div1')}>360p</button>
-            <button onClick={() => setVisibleDiv('div2')}>1080p</button>  
+            <button onClick={() => setVisibleDiv('div0')}>quality 1</button>
+            <button onClick={() => setVisibleDiv('div1')}>quality 2</button>
           </div>
         </div>
         <input
@@ -49,26 +49,43 @@ export default function Search() {
       <div className="yt_result">
         {result.map((item, index) => (
           <div key={index} className="yt-result-content">
-            <img className="thumnail" src={item.stats.thumbnails[4]?.url} alt="thumnail"/>
-            <h4>{item.stats.lengthSeconds} seconds</h4>
-            {visibleDiv === 'div1' &&
+            <h2 className="result-title">{item.title}</h2>
+            <br />
+            <img
+              className="thumbnail"
+              src={item.stats?.thumbnails?.[2]?.url || item.picture ||'default-thumbnail.jpg'}
+              alt="thumbnail"
+            />
+            <br />
+            <h4>{item.stats?.lengthSeconds || 'unknown'} seconds</h4>
+
+            {visibleDiv === 'div0' && item.links?.['1'] && (
+              <div id="div0">
+                <h4><i>Standard Definition</i></h4>
+                <p>{item.links['1']?.attributes?.quality}</p>
+                <a href={item.links['1']?.link} target="_blank" rel="noopener noreferrer">
+                  {item.links['1']?.quality} Download Link
+                </a>
+              </div>
+            )}
+
+            {visibleDiv === 'div1' && item.links?.['2'] && (
               <div id="div1">
                 <h4><i>Standard Definition</i></h4>
-                <p>{item.links['2']?.attributes?.quality }</p>
+                <p>{item.links['2']?.attributes?.quality}</p>
                 <a href={item.links['2']?.link} target="_blank" rel="noopener noreferrer">
-                  {item.links['2']?.quality } Download Link
+                  {item.links['2']?.quality} Download Link
                 </a>
-              </div>}
-            {visibleDiv === 'div2' && 
-              <div id="div2">
-                <h4><i>High Definition</i></h4>
-                <p>{item.links['3']?.attributes?.quality }</p>
-                <a href={item.links['3']?.link} target="_blank" rel="noopener noreferrer">
-                  {item.links['3']?.quality } Download Link
-                </a>
-              </div>}
+              </div>
+            )}
+
             <br />
-            <a className="audio" href={item.links['0']?.link} target="_blank" rel="noopener noreferrer">Audio Download Link</a>
+
+            {item.links?.['0'] && (
+              <a className="audio" href={item.links['0']?.link} target="_blank" rel="noopener noreferrer">
+                Audio Download Link
+              </a>
+            )}
           </div>
         ))}
       </div>

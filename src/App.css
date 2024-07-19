@@ -167,6 +167,13 @@ html{
  margin-top:1%;
  text-decoration: none;
 }
+.result-title{
+  font-size: 20px;
+  margin-left: 20%;
+  margin-right:20% ;
+  text-align:justify;
+  text-justify:distribute;
+}
 .yt_result h4{
   font-size: 20px;
   color: #0074FF;
@@ -195,7 +202,10 @@ html{
   justify-content: center;
   margin-top:2%;
 }
-
+.thumbnail{
+  width: 500px;
+  height: 500px;
+}
 
 /* Footer */
 .footer{
