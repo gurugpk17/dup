@@ -169,8 +169,8 @@ html{
 }
 .result-title{
   font-size: 20px;
-  margin-left: 20%;
-  margin-right:20% ;
+  margin-left: 5%;
+  margin-right:5% ;
   text-align:justify;
   text-justify:distribute;
 }
@@ -189,7 +189,7 @@ html{
 }
 .thumnail{
   width: 60%;
-  height: 60%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
