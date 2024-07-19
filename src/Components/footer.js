@@ -7,6 +7,7 @@ export default function Footer() {
   return (
     <footer>
         <hr className="line"/>
+        <h6 style={{textAlign:'center'}}>Contact us</h6>
         <div className="footer">
           <img className="wp" alt="whatsapp" src={Whatsapp} />
           <img className="fb" alt="facebook" src={Facebook} />
